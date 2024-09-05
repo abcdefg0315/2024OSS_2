@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            let f = document.form1;
+            let title = f.title;
+            if(title.value ==''){
+                alert("제목이 비어있음");
+                title.focus();  
+                return false;
+            }
+            let uname = f.uname;
+            if(uname.value.length < 2){
+                alert("이름을 두 글자 이상 입력");
+                uname.focus();  
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+    제목: <input type="text" name="title" /><br>
+    이름: <input type="text" name="uname" /><br>
+    내용: <textarea name="content" cols='20' rows='5'></textarea><br>
+    <button onclick="check()">저장</button>
+</form>
+</body>
+</html>
