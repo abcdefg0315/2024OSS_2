@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Page</title>
+    <style>
+        input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        #list {
+            margin-top: 20px;
+        }
+        .list-item {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dynamic Web Page</h2>
+    <input type="text" name="title" id="keyword" placeholder="단어를 입력하세요"/>
+    <button id="addBtn" style="background-color: #0000ff; color: #ffffff;">추가</button>
+    <button id="removeBtn" style="background-color: green; color: #ffffff;">삭제</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        const addBtn = document.getElementById('addBtn');
+        const removeBtn = document.getElementById('removeBtn');
+        const keywordInput = document.getElementById('keyword');
+        const list = document.getElementById('list');
+
+        // 추가 버튼 클릭 시
+        addBtn.addEventListener('click', () => {
+            let keyword = keywordInput.value.trim();
+            if (keyword) {
+                // 쉼표로 분리하여 배열로 만듦
+                const items = keyword.split(',').map(item => item.trim()).filter(item => item);
+
+                // 각 아이템을 리스트에 추가
+                items.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item;
+                    listItem.classList.add('list-item');
+                    list.appendChild(listItem);
+                });
+
+                // 입력 필드 비우기
+                keywordInput.value = '';
+            } else {
+                alert('단어를 입력하세요');
+            }
+        });
+
+        // 삭제 버튼 클릭 시
+        removeBtn.addEventListener('click', () => {
+            if (list.lastChild) {
+                list.removeChild(list.lastChild);
+            } else {
+                alert('삭제할 항목이 없습니다.');
+            }
+        });
+    </script>
+</body>
+</html>

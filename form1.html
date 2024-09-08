@@ -1,83 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    #wrapper {
-        padding-top: 3%;
-        padding-left: 18%;
-        padding-right: 18%;
-    }
-
-    #head {
-        text-align: center;
-    }
-
-    #main {}
-</style>
 
 <body>
-    <div id="wrapper">
-        <div id="head">
-            <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" width="70px">
-            <h1>Checkout form</h1>
-            <p>Below is an example form built entirely with Bootstrap' s form controls. Each required form group has a
-                validation state that can be triggered by attempting to submit the form without completing it.</p>
-        </div>
-        <form>
-            <div id="main">
-                <h2>Billing address</h2>
-                First name <br />
-                <input type="text" name="fname" />
-                <input type="text" name="lname" /><br /><br />
-                Username <br /><input type="text" name="username" /><br /><br />
-                Email (Optional) <br /><input type="text" name="email" /><br /><br />
-                <textarea name="address" cols='20' rows='5'></textarea>Address<br /><br />
-                Address2 (Optional) <br /><input type="text" name="address2" /><br /><br />
-                Country <br />
-                <select id="cars" name="cars">
-                    <option value="basic">Choose...</option>
-                    <option value="US">United States</option>
-                    <option value="KR">Korea</option>
-                </select><br />
-                State<br />
-                <select id="cars" name="cars">
-                    <option value="basic">Choose...</option>
-                    <option value="US">United States</option>
-                    <option value="KR">Korea</option>
-                </select><br />
-                Zip <br />
-                <input type="text" name="zip" />
-                <hr>
-                <input type="checkbox" id="same address" name="same address" value="same address">
-                <label for="vehicle1"> Shipping address is the same as my billing address</label><br>
-                <input type="checkbox" id="save info" name="save info" value="save info">
-                <label for="vehicle2"> Save this information for next time</label><br>
-                <hr>
-                <h2>Payment</h2><br />
-                <input type="radio" id="html" name="fav_language" value="HTML">
-                <label for="html">Credit card</label><br>
-                <input type="radio" id="css" name="fav_language" value="CSS">
-                <label for="css">Debit card</label><br>
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                <label for="javascript">Paypal</label><br /><br />
-                Name on card<br>
-                <input type="text" name="cardname" />
-                <input type="text" name="cardnum" /><br>
-                Full name as displayed on card<br><br>
+    <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" width="70px">
+    <h1>Checkout form</h1>
+    <p>Below is an example form built entirely with Bootstrap' s form controls. Each required form group has a
+        validation state that can be triggered by attempting to submit the form without completing it.</p>
+    <hr>
+    <h2>Your cart 3</h2>
+    <ul>
+        <li>Product name<br>Brief description</li>
+        <li>Second product<br>Brief description</li>
+        <li>Third item<br>Brief description</li>
+        <li>Promo code<br>EXAMPLECODE</li>
+        <li>Total (USD)</li>
+    </ul>
+    <input type="text" name="promo code" placeholder="Promo code"/>
+    <button>Redeem</button>
+    <hr>
+    <h2>Billing address</h2>
+    <p>First name</p>
+    <input type="text" name="fname" />
+    <input type="text" name="lname" /><br /><br />
+    <p>Username</p><input type="text" name="username" placeholder="Username"/><br /><br />
+    <p>Email (Optional)</p><input type="text" name="email" /><br /><br />
+    <textarea name="address" cols='20' rows='5'></textarea>Address<br /><br />
+    <p>Address2 (Optional)</p><input type="text" name="address2" /><br /><br />
+    <p>Country</p>
+    <select id="cars" name="cars">
+        <option value="basic">Choose...</option>
+        <option value="US">United States</option>
+        <option value="KR">Korea</option>
+    </select><br />
+    <p>State</p>
+    <select id="cars" name="cars">
+        <option value="basic">Choose...</option>
+        <option value="US">United States</option>
+        <option value="KR">Korea</option>
+    </select><br />
+    <p>Zip</p>
+    <input type="text" name="zip" />
+    <hr>
+    <input type="checkbox" id="same address" name="same address" value="same address">
+    <label for="vehicle1"> Shipping address is the same as my billing address</label><br>
+    <input type="checkbox" id="save info" name="save info" value="save info">
+    <label for="vehicle2"> Save this information for next time</label><br>
+    <hr>
+    <h2>Payment</h2>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">Credit card</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">Debit card</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">Paypal</label><br /><br />
+    </p>Name on card</p>
+    <input type="text" name="cardname" />
+    <input type="text" name="cardnum" /><br>
+    </p>Full name as displayed on card</p><br><br>
 
-                Expiration<br>
-                <input type="text" name="cardname" size="12" />
-                <input type="text" name="cardnum" size="12" /><br><br>
-                Birtyday<br>
-                <input type="date" id="birthday" name="birthday">
-            </div>
-        </form>
-    </div>
+    </p>Expiration</p>
+    <input type="text" name="cardname" size="12" />
+    <input type="text" name="cardnum" size="12" /><br><br>
+    </p>Birtyday</p>
+    <input type="date" id="birthday" name="birthday">
+    <hr>
+    
+<input type="button" value="Continue to checkout">
 </body>
 
 </html>

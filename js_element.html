@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: lightgoldenrodyellow;
+            width: 200px;
+            height: 50px
+        }
+    </style>
+</head>
+
+<body>
+    <h2>My first page</h2>
+    <p id="demo" onclick="changeData()">Click me</p>
+    <p id="mybutton">Click me</p>
+
+    <p id="demo2">hello world</p>
+</body>
+
+</html>
+
+<script>
+    function changeData() {
+        document.getElementById("demo").innerHTML = "Hello world!";
+    }
+    function aaa(){
+        let pobj = document.getElementById("demo");
+        pobj.innerHTML='<a href="https://www.naver.com/">naver</a>';
+    }
+    document.getElementById("mybutton").addEventListener("click",displayDate);
+
+
+    let abc = document.getElementById('abc');
+    abc.addEventListener('click',function(){
+        alert('div clicked');
+    });
+
+
+
+    let demo2 = document.getElementById("demo2");
+    demo2.innerText = "안녕하세요";
+    demo2.addEventListener("click",() => {alert("안안안안안");});
+</script>
+
+getElementById, getElementsByClassName, getElementsByTagName
+innerHTML innerText textContent
+addEventListener, removeEventListener
